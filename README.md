@@ -10,4 +10,5 @@ This repo contains code for Junior Programmer Pathway missions on Unity Learn we
 
 - Mod The Cube
 - Counting Prototype
+- Fix Errors Project
 - Application Options Menu Creation
