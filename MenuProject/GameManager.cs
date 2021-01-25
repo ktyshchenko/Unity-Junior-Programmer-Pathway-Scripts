@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Slider audioSlider;
 
     public Slider textSizeSlider;
+    public Dropdown textColorDropdown;
     private AudioSource ac;
 
     private void Start()
@@ -37,6 +38,77 @@ public class GameManager : MonoBehaviour
         foreach (Text texts in textComponents2)
         {
             texts.fontSize = (int)textSizeSlider.value;
+        }
+    }
+
+    public void TextColorChange()
+    {
+        foreach (TMP_Text texts in textComponents)
+        {
+            switch (textColorDropdown.value)
+            {
+                case 0:
+                    texts.color = Color.blue;
+                    break;
+                case 1:
+                    texts.color = Color.red;
+                    break;
+                case 2:
+                    texts.color = Color.green;
+                    break;
+                case 3:
+                    texts.color = Color.black;
+                    break;
+                case 4:
+                    texts.color = Color.white;
+                    break;
+                case 5:
+                    if (isLightMode)
+                    {
+                        texts.color = Color.black;
+                    }
+                    else
+                    {
+                        texts.color = Color.white;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        foreach (Text texts in textComponents2)
+        {
+            switch (textColorDropdown.value)
+            {
+                case 0:
+                    texts.color = Color.blue;
+                    break;
+                case 1:
+                    texts.color = Color.red;
+                    break;
+                case 2:
+                    texts.color = Color.green;
+                    break;
+                case 3:
+                    texts.color = Color.black;
+                    break;
+                case 4:
+                    texts.color = Color.white;
+                    break;
+                case 5:
+                    if (isLightMode)
+                    {
+                        texts.color = Color.black;
+                    }
+                    else
+                    {
+                        texts.color = Color.white;
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
