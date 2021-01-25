@@ -11,10 +11,15 @@ public class GameManager : MonoBehaviour
     private GameObject[] optionsComponents;
     private TMP_Text[] textComponents;
     private Text[] textComponents2;
+    private GameObject[] all;
 
     public Slider textSizeSlider;
     public Dropdown textColorDropdown;
+    public Toggle modeToggle;
     public Slider audioSlider;
+
+    [SerializeField]
+    private bool isLightMode = true;
 
     private AudioSource ac;
 
@@ -22,6 +27,8 @@ public class GameManager : MonoBehaviour
     {
         textComponents = Object.FindObjectsOfType<TMP_Text>();
         textComponents2 = Object.FindObjectsOfType<Text>();
+
+        all = GameObject.FindObjectsOfType<GameObject>();
 
         optionsComponents = GameObject.FindGameObjectsWithTag("OptionsMenu");
         foreach (GameObject obj in optionsComponents)
@@ -160,6 +167,69 @@ public class GameManager : MonoBehaviour
         if (ac != null)
         {
             ac.volume = audioSlider.value;
+        }
+    }
+
+    public void ModeChange()
+    {
+        if (modeToggle.isOn)
+        {
+            isLightMode = true;
+            foreach (GameObject one in all)
+            {
+                if (one.GetComponent<Image>() != null)
+                {
+                    one.GetComponent<Image>().color = Color.white;
+                    if (one.name == "Panel")
+                    {
+                        var panelColor = one.GetComponent<Image>().color;
+                        panelColor.a = 0.2f;
+                        one.GetComponent<Image>().color = panelColor;
+                    }
+                }
+            }
+
+            foreach (TMP_Text texts in textComponents)
+            {
+                texts.color = Color.black;
+            }
+
+            foreach (Text texts in textComponents2)
+            {
+                texts.color = Color.black;
+            }
+
+            textColorDropdown.value = 5;
+        }
+        else
+        {
+            isLightMode = false;
+            foreach (GameObject one in all)
+            {
+                if (one.GetComponent<Image>() != null)
+                {
+                    print(one.name);
+                    one.GetComponent<Image>().color = Color.black;
+                    if (one.name == "Panel")
+                    {
+                        var panelColor = one.GetComponent<Image>().color;
+                        panelColor.a = 0.2f;
+                        one.GetComponent<Image>().color = panelColor;
+                    }
+                }
+            }
+
+            foreach (TMP_Text texts in textComponents)
+            {
+                texts.color = Color.white;
+            }
+
+            foreach (Text texts in textComponents2)
+            {
+                texts.color = Color.white;
+            }
+
+            textColorDropdown.value = 5;
         }
     }
 
