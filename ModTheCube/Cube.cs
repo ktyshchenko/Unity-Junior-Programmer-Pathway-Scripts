@@ -6,6 +6,7 @@ public class Cube : MonoBehaviour
 {
     public MeshRenderer Renderer;
 
+    public float speed = 15.0f;
     private float limit = 3.0f; // limit to set position/scale
     private float repeatTime = 2.0f;
 
@@ -19,7 +20,7 @@ public class Cube : MonoBehaviour
     
     void Update()
     {
-
+        RotateCube();
     }
 
     private void SetPosition()
@@ -39,5 +40,10 @@ public class Cube : MonoBehaviour
 
         Material material = Renderer.material;
         material.color = col;
+    }
+
+    private void RotateCube()
+    {
+        transform.Rotate(speed * Time.deltaTime, speed * Time.deltaTime, 0.0f); // x, y, z
     }
 }
