@@ -15,4 +15,4 @@ This repo contains code for Junior Programmer Pathway missions on Unity Learn we
 
 Please contact me if you would like access to the full project (this repo contains just scripts).
 
-All initial scripts are downloaded from the Unity Learn website (provided as parrt of the missions).
+All initial scripts are downloaded from the Unity Learn website (provided as part of the missions).
