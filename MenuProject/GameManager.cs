@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public Toggle modeToggle;
     public Slider audioSlider;
 
+    private int initialValue = 5;
+
     [SerializeField]
     private bool isLightMode = true;
 
@@ -75,11 +77,12 @@ public class GameManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
-        Debug.Log("Application exited");
+        //Debug.Log("Application exited");
     }
 
     public void TextSizeChange()
     {
+        // WILL NEED TO CHANGE TO AVOID CODE REPEAT
         foreach (TMP_Text texts in textComponents)
         {
             texts.fontSize = (int)textSizeSlider.value;
@@ -93,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void TextColorChange()
     {
+        // WILL NEED TO CHANGE TO AVOID CODE REPEAT
         foreach (TMP_Text texts in textComponents)
         {
             switch (textColorDropdown.value)
@@ -175,11 +179,13 @@ public class GameManager : MonoBehaviour
         if (modeToggle.isOn)
         {
             isLightMode = true;
+
             foreach (GameObject one in all)
             {
                 if (one.GetComponent<Image>() != null)
                 {
                     one.GetComponent<Image>().color = Color.white;
+
                     if (one.name == "Panel")
                     {
                         var panelColor = one.GetComponent<Image>().color;
@@ -199,7 +205,7 @@ public class GameManager : MonoBehaviour
                 texts.color = Color.black;
             }
 
-            textColorDropdown.value = 5;
+            textColorDropdown.value = initialValue;
         }
         else
         {
@@ -210,6 +216,7 @@ public class GameManager : MonoBehaviour
                 {
                     print(one.name);
                     one.GetComponent<Image>().color = Color.black;
+
                     if (one.name == "Panel")
                     {
                         var panelColor = one.GetComponent<Image>().color;
@@ -229,7 +236,7 @@ public class GameManager : MonoBehaviour
                 texts.color = Color.white;
             }
 
-            textColorDropdown.value = 5;
+            textColorDropdown.value = initialValue;
         }
     }
 
