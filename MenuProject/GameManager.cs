@@ -7,12 +7,15 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    private GameObject[] mainComponents;
+    private GameObject[] optionsComponents;
     private TMP_Text[] textComponents;
     private Text[] textComponents2;
-    public Slider audioSlider;
 
     public Slider textSizeSlider;
     public Dropdown textColorDropdown;
+    public Slider audioSlider;
+
     private AudioSource ac;
 
     private void Start()
@@ -20,12 +23,52 @@ public class GameManager : MonoBehaviour
         textComponents = Object.FindObjectsOfType<TMP_Text>();
         textComponents2 = Object.FindObjectsOfType<Text>();
 
+        optionsComponents = GameObject.FindGameObjectsWithTag("OptionsMenu");
+        foreach (GameObject obj in optionsComponents)
+        {
+            obj.SetActive(false);
+        }
+
+        mainComponents = GameObject.FindGameObjectsWithTag("MainMenu");
+
         GetAudio();
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void OptionsOn()
+    {
+        foreach (GameObject obj in optionsComponents)
+        {
+            obj.SetActive(true);
+        }
+
+        foreach (GameObject obj in mainComponents)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    public void OptionsOff()
+    {
+        foreach (GameObject obj in optionsComponents)
+        {
+            obj.SetActive(false);
+        }
+
+        foreach (GameObject obj in mainComponents)
+        {
+            obj.SetActive(true);
+        }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Application exited");
     }
 
     public void TextSizeChange()
