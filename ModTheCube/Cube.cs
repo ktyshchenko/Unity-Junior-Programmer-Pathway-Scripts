@@ -21,6 +21,12 @@ public class Cube : MonoBehaviour
     void Update()
     {
         RotateCube();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SetPosition();
+            SetScale();
+        }
     }
 
     private void SetPosition()
