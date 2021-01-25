@@ -1,50 +1,53 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CongratScript : MonoBehaviour
 {
-    public TextMesh Text;
-    public ParticleSystem SparksParticles;
-    
-    private List<string> TextToDisplay;
-    
-    private float RotatingSpeed;
-    private float TimeToNextText;
+    public TextMesh text;
+    public ParticleSystem sparksParticles;
 
-    private int CurrentText;
-    
+    private List<string> textToDisplay = new List<string>();
+
+    private float rotatingSpeed;
+    private float timeToNextText;
+
+    private int currentText;
+
     // Start is called before the first frame update
     void Start()
     {
-        TimeToNextText = 0.0f;
-        CurrentText = 0
-        
-        RotatingSpeed = 1.0;
+        // Initialize values
+        timeToNextText = 0.0f;
+        currentText = 0;
+        rotatingSpeed = 10.0f;
 
-        TextToDisplay.Add("Congratulation");
-        TextToDisplay.Add("All Errors Fixed");
+        textToDisplay.Add("Congratulation");
+        textToDisplay.Add("All Errors Fixed");
 
-        Text.text = TextToDisplay[0];
-        
-        SparksParticles.Play();
+        text.text = textToDisplay[0];
+
+        sparksParticles.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        TimeToNextText += Time.deltaTime;
+        text.transform.Rotate(0f, 0f, rotatingSpeed * Time.deltaTime);
+        timeToNextText += Time.deltaTime;
 
-        if (TimeToNextText > 1.5f)
+        if (timeToNextText > 1.5f)
         {
-            TimeToNextText = 0.0f;
-            
-            CurrentText++;
-            if (CurrentText >= TextToDisplay.Count)
+            timeToNextText = 0.0f;
+
+            currentText++;
+
+            if (currentText >= textToDisplay.Count)
             {
-                CurrentText = 0;
+                currentText = 0;
+            }
 
-
-            Text.text = TextToDisplay[CurrentText];
+            text.text = textToDisplay[currentText];
         }
     }
 }
