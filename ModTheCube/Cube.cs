@@ -7,11 +7,14 @@ public class Cube : MonoBehaviour
     public MeshRenderer Renderer;
 
     private float limit = 3.0f; // limit to set position/scale
+    private float repeatTime = 2.0f;
 
     void Start()
     {
         SetPosition();
         SetScale();
+
+        InvokeRepeating("SetColorCube", 0.0f, repeatTime); // change color every X sec
     }
     
     void Update()
@@ -28,5 +31,13 @@ public class Cube : MonoBehaviour
     private void SetScale()
     {
         transform.localScale = Vector3.one * Random.Range(0.0f, limit);
+    }
+
+    private void SetColorCube()
+    {
+        Color col = new Color(Random.value, Random.value, Random.value, Random.value);
+
+        Material material = Renderer.material;
+        material.color = col;
     }
 }
