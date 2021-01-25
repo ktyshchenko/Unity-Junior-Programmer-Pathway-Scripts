@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
             Instantiate(sphere);
         }
 
-        StartCoroutine(GameCoroutine());
+        StartCoroutine(GameCoroutine()); // game lasts for set amount of time
 
     }
 
