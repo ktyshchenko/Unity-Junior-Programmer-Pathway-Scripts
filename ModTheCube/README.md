@@ -13,3 +13,5 @@ The goal was to modify cube's behaviour:
 4). Change cube's color and opacity every X seconds  
 
 Play [here](https://play.unity.com/mg/other/modthecube-junior-programmer-pathway-mission)!
+
+![alt text](https://github.com/ktyshchenko/Junior-Programmer-Pathway/blob/main/ModTheCube/Thumbnail.png)
