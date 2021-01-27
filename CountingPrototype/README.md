@@ -3,7 +3,6 @@ Pathway mission from Unity Learn
 https://learn.unity.com/pathway/junior-programmer
 
 _Author: Kate Tyshchenko_  
-
 _Personal website: https://ktyshchenko.github.io/_
 
 The goal was to create a counting prototype:  

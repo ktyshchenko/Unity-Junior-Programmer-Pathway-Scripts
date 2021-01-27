@@ -3,7 +3,6 @@ Pathway mission from Unity Learn
 https://learn.unity.com/pathway/junior-programmer
 
 _Author: Kate Tyshchenko_  
-
 _Personal website: https://ktyshchenko.github.io/_
 
 The goal was to modify cube's behaviour:  
@@ -12,4 +11,6 @@ The goal was to modify cube's behaviour:
 3). Change cube's rotation angle and speed from what was provided  
 4). Change cube's color and opacity every X seconds  
 
-Play [here](https://play.unity.com/mg/other/modthecube-junior-programmer-pathway-mission)!
+PLAY [HERE](https://play.unity.com/mg/other/modthecube-junior-programmer-pathway-mission)!
+
+![alt text](https://github.com/ktyshchenko/Junior-Programmer-Pathway/blob/main/ModTheCube/Thumbnail.png)
