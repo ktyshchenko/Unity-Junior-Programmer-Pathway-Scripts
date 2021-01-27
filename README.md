@@ -8,7 +8,7 @@ _Personal website: https://ktyshchenko.github.io/_
 
 This repo contains code for Junior Programmer Pathway missions on Unity Learn website.
 
-- [Mod The Cube](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/ModTheCube)
+- [Mod The Cube](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/ModTheCube) (Play [here](https://play.unity.com/mg/other/modthecube-junior-programmer-pathway-mission)!)
 - [Counting Prototype](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/CountingPrototype)
 - [Fix Errors Project](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/ErrorProject)
 - [Application Options Menu Creation](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/MenuProject)  
