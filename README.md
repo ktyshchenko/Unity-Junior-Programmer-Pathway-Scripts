@@ -1,5 +1,5 @@
 # Junior-Programmer-Pathway
-Pathway missions from Unity Learn
+Pathway missions from Unity Learn  
 https://learn.unity.com/pathway/junior-programmer
 
 _Author: Kate Tyshchenko_  
