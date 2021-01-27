@@ -1,5 +1,5 @@
 # Counting Prototype from Junior-Programmer-Pathway
-Pathway mission from Unity Learn
+Pathway mission from Unity Learn  
 https://learn.unity.com/pathway/junior-programmer
 
 _Author: Kate Tyshchenko_  
