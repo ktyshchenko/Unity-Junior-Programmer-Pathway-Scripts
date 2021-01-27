@@ -1,5 +1,5 @@
 # Mod The Cube from Junior-Programmer-Pathway
-Pathway mission from Unity Learn
+Pathway mission from Unity Learn  
 https://learn.unity.com/pathway/junior-programmer
 
 _Author: Kate Tyshchenko_  
@@ -12,4 +12,4 @@ The goal was to modify cube's behaviour:
 3). Change cube's rotation angle and speed from what was provided  
 4). Change cube's color and opacity every X seconds  
 
-Link to the app coming soon!
+Play [here](https://play.unity.com/mg/other/modthecube-junior-programmer-pathway-mission)!
