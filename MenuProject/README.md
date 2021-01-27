@@ -12,4 +12,6 @@ The goal was to create an application menu:
 4). Can start/exit the game or go into a separate options menu  
 5). Can switch between light/dark mode  
 
-Link to the app coming soon!
+![alt text](https://github.com/ktyshchenko/Junior-Programmer-Pathway/blob/main/MenuProject/Thumbnail%201.png)
+![alt text](https://github.com/ktyshchenko/Junior-Programmer-Pathway/blob/main/MenuProject/Thumbnail%202.png)
+![alt text](https://github.com/ktyshchenko/Junior-Programmer-Pathway/blob/main/MenuProject/Thumbnail%203.png)
