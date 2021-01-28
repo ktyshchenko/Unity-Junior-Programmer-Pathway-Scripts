@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject sphere;
 
-    private static float duration = 30.0f;
+    public static float duration = 30.0f;
     private static bool isGameOver = false;
 
     // Update is called once per frame
@@ -28,5 +29,9 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Scene");
+    }
 
 }
