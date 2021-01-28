@@ -6,19 +6,43 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-    public Text CounterText;
+    public Text counterText;
+    public Text timeText;
 
-    private int Count = 0;
+    private float timeLeft;
+    private static float offset = 1.0f; // to make it start at X sec
+
+    private int count = 0;
 
     private void Start()
     {
-        Count = 0;
+        // Initialize
+        count = 0;
+        timeLeft = GameManager.duration + offset;
+
+        DisplayTime();
+    }
+
+    private void Update()
+    {
+        timeLeft -= Time.deltaTime;
+        DisplayTime();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Count += 1;
-        CounterText.text = "Count : " + Count;
+        count += 1;
+        counterText.text = "Count : " + count;
         Destroy(other.gameObject);
+    }
+
+    private void DisplayTime()
+    {
+        if (timeLeft < 0)
+        {
+            timeLeft = 0;
+        }
+
+        timeText.text = "Time : " + (int)timeLeft;
     }
 }
