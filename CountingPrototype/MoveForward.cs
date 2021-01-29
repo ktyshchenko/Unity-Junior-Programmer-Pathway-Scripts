@@ -6,14 +6,24 @@ public class MoveForward : MonoBehaviour
 {
     private float speed = 10.0f;
 
-    // Update is called once per frame
-    void Update()
+    private float xLimit = -30.0f; // past the box
+
+    private void Update()
     {
-        Move();
+        ThrowBall();
+        DestroyOutOfBounds();
     }
 
-    private void Move()
+    private void ThrowBall()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+    }
+
+    private void DestroyOutOfBounds()
+    {
+        if (transform.position.x < xLimit)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
