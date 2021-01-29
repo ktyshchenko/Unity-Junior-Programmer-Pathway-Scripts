@@ -10,7 +10,7 @@ public class Counter : MonoBehaviour
     public Text timeText;
 
     private float timeLeft;
-    private static float offset = 1.0f; // to make it start at X sec
+    private static float offset = 1.0f; // to make it start at X sec exactly
 
     private int count = 0;
 
@@ -25,7 +25,7 @@ public class Counter : MonoBehaviour
 
     private void Update()
     {
-        timeLeft -= Time.deltaTime;
+        timeLeft -= Time.deltaTime; // count time left
         DisplayTime();
     }
 
