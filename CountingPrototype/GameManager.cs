@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverText;
 
+    private void Start()
+    {
+        isGameOver = false;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isGameOver)
