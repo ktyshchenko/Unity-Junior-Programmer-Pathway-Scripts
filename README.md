@@ -6,9 +6,10 @@ _Author: Kate Tyshchenko_
 _Personal website: https://ktyshchenko.github.io/_
 
 This repo contains code for Junior Programmer Pathway missions on Unity Learn website.
+Did them for fun :)
 
 - [Mod The Cube](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/ModTheCube) (Play [here](https://play.unity.com/mg/other/modthecube-junior-programmer-pathway-mission)!)
-- [Counting Prototype](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/CountingPrototype)
+- [Counting Prototype - Catch the Box](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/CountingPrototype) (Play [here](https://play.unity.com/mg/other/catch-the-box-junior-programmer-pathway-mission)!)
 - [Fix Errors Project](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/ErrorProject)
 - [Application Options Menu Creation](https://github.com/ktyshchenko/Junior-Programmer-Pathway/tree/main/MenuProject)  
 
